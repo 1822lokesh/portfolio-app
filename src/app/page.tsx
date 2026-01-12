@@ -48,7 +48,7 @@ export default function Home() {
 
       {/* 3. PLACE PROJECTS COMPONENT HERE */}
       <Projects />
-      {/* <Contact /> */}
+      <Contact />
       
     </>
   );

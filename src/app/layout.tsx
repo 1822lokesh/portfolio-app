@@ -2,7 +2,10 @@ import type { Metadata } from 'next';
 import ThemeRegistry from '@/theme/ThemeRegistry';
 import SmoothScroll from '@/components/layout/SmoothScroll';
 import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/sections/Contact';
+
+// FIX: Import the REAL Footer from layout, not Contact
+import Footer from '@/components/layout/Footer'; 
+import ScrollToTop from '@/components/ui/ScrollToTop';
 
 export const metadata: Metadata = {
   title: 'Professional Portfolio',
@@ -22,6 +25,7 @@ export default function RootLayout({
             <Navbar />
             {children}
             <Footer />
+            <ScrollToTop />
           </SmoothScroll>
         </ThemeRegistry>
       </body>

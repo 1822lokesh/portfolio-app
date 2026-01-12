@@ -18,7 +18,7 @@ const theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#D4AF37', // Professional Gold
+      main: '#0f0f18', // Professional Gold
     },
     background: {
       default: '#121212', // Deep Charcoal

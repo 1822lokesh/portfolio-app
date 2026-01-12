@@ -16,7 +16,7 @@ export default function Navbar() {
       <Container maxWidth="lg">
         <Toolbar disableGutters>
           <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 'bold', color: 'primary.main' }}>
-            PORTFOLIO.
+            LOKESH K H
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
