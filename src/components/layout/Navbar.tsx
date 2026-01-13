@@ -12,7 +12,17 @@ export default function Navbar() {
   };
 
   return (
-    <AppBar position="fixed" sx={{ background: 'rgba(18, 18, 18, 0.8)', backdropFilter: 'blur(10px)', boxShadow: 'none' }}>
+    
+    <AppBar 
+      position="fixed" 
+      // UPDATE THIS SX PROP BELOW:
+      sx={{ 
+        background: 'rgba(18, 18, 18, 0.7)', // 70% opacity black
+        backdropFilter: 'blur(12px)',        // The blur effect
+        borderBottom: '1px solid rgba(255, 255, 255, 0.05)', // Thin border
+        boxShadow: 'none',
+      }}
+    >
       <Container maxWidth="lg">
         <Toolbar disableGutters>
           <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 'bold', color: 'primary.main' }}>

@@ -1,14 +1,27 @@
-import { Box, Typography, Button, Container } from '@mui/material';
+import { Stack, Tooltip, Box, Typography, Button, Container } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 // 1. IMPORT THE PROJECT COMPONENT HERE
 import Projects from '@/components/sections/Projects'; 
 import Contact from '@/components/sections/Contact';
+import { FadeIn } from '@/components/ui/MotionBox';
+import { SiReact, SiNextdotjs, SiTypescript, SiPython, SiDjango } from 'react-icons/si';
+
+
+
+const skills = [
+  { icon: SiReact, name: 'React' },
+  { icon: SiNextdotjs, name: 'Next.js' },
+  { icon: SiTypescript, name: 'TypeScript' },
+  { icon: SiPython, name: 'Python' },
+  { icon: SiDjango, name: 'Django' },
+];
 
 export default function Home() {
   return (
     // 2. WRAP EVERYTHING IN A FRAGMENT (<> ... </>)
     <>
       {/* HERO SECTION START */}
+      <FadeIn>
       <Box
         sx={{
           height: '100vh',
@@ -45,7 +58,28 @@ export default function Home() {
         </Container>
       </Box>
       {/* HERO SECTION END */}
-
+      </FadeIn>
+<Box sx={{ py: 5, borderBottom: '1px solid #333' }}>
+  <Container>
+    <Typography variant="overline" color="text.secondary" sx={{ display: 'block', mb: 2, textAlign: 'center' }}>
+      Trusted Technologies
+    </Typography>
+    <Stack direction="row" justifyContent="center" gap={4} flexWrap="wrap">
+      {skills.map((Skill) => (
+        <Tooltip title={Skill.name} key={Skill.name}>
+          <Box sx={{ 
+            fontSize: '2.5rem', 
+            color: 'gray', 
+            transition: '0.3s', 
+            '&:hover': { color: '#3795d4', transform: 'translateY(-5px)' } 
+          }}>
+            <Skill.icon />
+          </Box>
+        </Tooltip>
+      ))}
+    </Stack>
+  </Container>
+</Box>
       {/* 3. PLACE PROJECTS COMPONENT HERE */}
       <Projects />
       <Contact />
